@@ -1,0 +1,136 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IntelliJ IDEA ###
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+*.iws
+*.iml
+*.ipr
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# Virtual machine crash logs, core dumps, and other system logs
+hs_err_pid*
+
+# Eclipse specific files
+.metadata/
+.classpath
+.project
+.settings/
+
+# VS Code specific files
+.vscode/
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+
+# IntelliJ IDEA specific files (in case you switch)
+.idea/
+*.iml
+*.iws
+out/
+
+# Maven files
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Gradle files
+.gradle/
+build/
+
+# Binary and generated files
+bin/
+gen/
+build/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Mac specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+ehthumbs.db
+
+# Linux specific files
+*~
+
+# IDE specific folders
+*.log
+*.diff
+*.patch
+*.orig
+*.rej
+
+# Exclude classpath files (Optional, for handling multiple environments)
+*.classpath
+*.factorypath
+
+# Exclude personal preferences and workspace settings
+*.userprefs
+
+# Node.js dependencies (if used in projects)
+node_modules/
+
+# JUnit working directories
+junit/
+
+# Java command-line class output
+*.out
+*.err
+
+# Ignore auto-generated build files
+build.xml
+build.gradle
