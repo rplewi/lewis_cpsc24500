@@ -1,3 +1,10 @@
+/*
+ * Name: Roman Lewis
+ * Project: Fortune Teller, a basic program that takes in strings of text and displays them on the screen,
+ * in this project specifically it will take your name, age, and favorite color. Then it will repeat back those things
+ * also while including what percentage your "lucky number" is divided by your age.
+ */
+
 import java.util.Scanner;
 import java.util.Random;
 
@@ -15,14 +22,14 @@ public class FortuneTeller {
             System.out.print("*");
         }
 
-        System.out.println("\nWhat is your name?");
+        System.out.print("\nWhat is your name? ");
         String iName = sc.nextLine();
 
-        System.out.println("How old are you?");
+        System.out.print("\nHow old are you? ");
         int iAge = sc.nextInt();
         sc.nextLine(); // Clears input buffer
 
-        System.out.println("What is your favorite color?");
+        System.out.print("\nWhat is your favorite color? ");
         String iColor = sc.nextLine();
 
         System.out.println("\nWelcome " + iName);
@@ -39,6 +46,7 @@ public class FortuneTeller {
         String endMess1 = "Your lucky number is";
         String endMess2 = "Percent of your age.";
         System.out.printf("%s %.3f %s", endMess1, actPercent, endMess2);
-        System.out.println("\nThank you for using this program");
+        System.out.println("\n\nThank you for using this program");
+
     }
 }
