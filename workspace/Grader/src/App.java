@@ -1,7 +1,7 @@
-/*
- * This application computes a person's final grade from 3 test scores
- * It will also tell them if they got an A, B, etc.
- */
+
+// This application computes a person's final grade from 3 test scores
+// It will also tell them if they got an A, B, etc.
+ 
 import java.util.Scanner;
 public class App {
     public static void printBanner(){
