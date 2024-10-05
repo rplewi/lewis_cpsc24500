@@ -1,9 +1,10 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
-/*
- * Roman Lewis
- * Starlight Coffee (Description Here)
- * Date: Day 7 October 2024
+/**
+ * @author Roman Lewis
+ * @ Starlight Coffee: This is a program that will take the user's input and use that input to navigate a menu to order a coffee.
+ * It will also print the bill including tax, and discounts!
+ * Date: Day 5 October 2024
  */
 
 public class App {
