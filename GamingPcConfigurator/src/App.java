@@ -69,6 +69,7 @@ public class App {
     int howMany = 0, userInput, choiceInput, pcCost, pcAmount = 0;
     double totalCost; 
     String fileName = "", description;
+    File myFile = null;
     printBanner();
     
     while (pw == null){
@@ -85,6 +86,8 @@ public class App {
         System.out.println("Please enter the name of the file you want the receipt saved to.");
         fileName = sc.nextLine();
         pw = new PrintWriter(new BufferedWriter(new FileWriter(new File(fileName))));
+        // myFile will keep track of the file location for the end of the program!
+        myFile = new File(fileName);
     }
     totalCost = 0.0;
     for (int i = 1; i <= howMany; i++){
@@ -199,7 +202,8 @@ public class App {
     }
     System.out.println("\nTotal price was: $" + totalCost);
     System.out.println("Thank you for using this program, have a nice day!");
-    pw.println("Total cost of " + pcAmount + " PCs: $" + totalCost);
+    System.out.println("Your file has been saved to: " + myFile.getAbsolutePath()); // "myFile.getAbsolutePath() Credit: found online, had to create a new variable to do it, because pw was created
+    pw.println("Total cost of " + pcAmount + " PCs: $" + totalCost);                // with just the string so it doesn't have any of the methods that File does " 
     pw.close();
     sc.close();
     }
