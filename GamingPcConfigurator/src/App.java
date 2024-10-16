@@ -192,7 +192,6 @@ public class App {
                     System.out.println("\nPlease use the correct input and try again!");
                     break;
             }
-
         } while (userInput != 5);
             pw.println("Pc #" + i + " ($" + pcCost + ")");
             pw.println(description);
@@ -203,7 +202,7 @@ public class App {
     System.out.println("\nTotal price was: $" + totalCost);
     System.out.println("Thank you for using this program, have a nice day!");
     System.out.println("Your file has been saved to: " + myFile.getAbsolutePath()); // "myFile.getAbsolutePath() Credit: found online, had to create a new variable to do it, because pw was created
-    pw.println("Total cost of " + pcAmount + " PCs: $" + totalCost);                // with just the string so it doesn't have any of the methods that File does " 
+    pw.println("Total cost of " + pcAmount + " PCs: $" + totalCost);                // with just the string so it doesn't have any of the methods that File does" 
     pw.close();
     sc.close();
     }
