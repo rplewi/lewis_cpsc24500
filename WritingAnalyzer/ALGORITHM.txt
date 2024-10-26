@@ -1,0 +1,16 @@
+
+
+ ArrayList<String> uniqueWords // Keeps track of 
+LinkedHashMap<String, Integer> counts // counts the occurence of words
+
+have a loop that runs while (file.hasNextLine())\{
+replaceAll(\'[//p\{Punct\}\',\'\')
+use the splut function to blow it up into separate words \'97> parts array!
+	foreach part in the parts array\{
+	// for each word that has appeared on the line
+		See if its in '93uniqueWords'94 '97> uniqueWords.contains(part) '97> true or false
+		and if not, add it to uniqueWords and also ask counts to do this: counts.add(part,1)
+		if it was in uniqueWords: counts.put(part, counts.get(part)+1);
+	}
+}
+You have got a unique list of words and their occurence!\
