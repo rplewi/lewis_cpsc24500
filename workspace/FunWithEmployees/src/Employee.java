@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 /**
  * This models an employee of the organization.
  * It stores the first and last names, hours, worked, and hourly rate for an employee.
@@ -9,6 +10,7 @@ public class Employee {
     private String lastName;
     private double hoursWorked;
     private double payRate;
+    private ArrayList<String> responsibilities;
 
     // Used right click background "source action" --> generate getters and setters
     // Only problem is, is that hoursWorked CANNOT be negative, so we need a condition to fix that.
@@ -79,12 +81,28 @@ public class Employee {
         setLastName(lastName);
         setPayRate(payRate);
         setHoursWorked(hoursWorked);
+        responsibilities = new ArrayList<String>(); // This is an example of composition
+    }
+    public void addResponsibility(String resp){
+        responsibilities.add(resp);
+    }
+    public void removeAllResponsibilities(){
+        responsibilities.clear();
+    }
+    // This is a model class, so NO SYSTEM.OUT.PRINTLN 
+    public String getResponsibilitiesAsString(){
+        String result = "";
+        for(String resp : responsibilities){
+            result += resp + "\n";
+        }
+        return result;
     }
     // Overrides the default toString memory location which we dont want to show, the object location is shown because it descends the Object object.
     @Override
     public String toString(){
         // This string also includes the java.lang.object.toString() which uses the "Super" keyword, overriding the override.
-        return String.format("%s %s %.2f %.2f", firstName, lastName, hoursWorked, payRate);
+        return String.format("%s %s %.2f %.2f\n%s", firstName, lastName, hoursWorked, 
+        payRate, getResponsibilitiesAsString());
     }
 
     

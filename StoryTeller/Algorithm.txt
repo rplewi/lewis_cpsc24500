@@ -1,0 +1,13 @@
+class Author{
+    private LinkedHashMap<String, ArrayList<String>>() // words you can choose from;
+
+}
+One hashMap that holds each of the different types of words.
+File is going to be the only thing that is going to be read, no writing to files.
+words['n'] --> ArrayList<String> // all nouns
+words['v'] --> ArrayList<String> // all vers
+words['prep'] --> ArrayList<String> // all prepositions
+words['adj'] --> ArrayList<String> // all adjectives
+words['adv'] --> ArrayList<String> // all adverbs
+
+getWord("n") --> word would be randomly selected from the list of words inside the Arraylist in this case it would be nouns.
