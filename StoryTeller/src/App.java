@@ -20,6 +20,8 @@ public class App {
     }
     public static void main(String[] args) throws Exception {
         printBanner();
+        int sentCount = 0, prep, adv, adj;
+        String done = "";
         Scanner sc = new Scanner(System.in);
         Scanner fsc = null;
         WordFileReader wfr = new WordFileReader();
@@ -35,9 +37,8 @@ public class App {
         }
         System.out.println("File read success!\n");
         LinkedHashMap<String, ArrayList<String>> wordsMapped = wfr.readFile(fsc);
-        int sentCount = 0, prep, adv, adj;
+
         ArrayList<String> story = new ArrayList<String>();
-        String done = "y";
         Author author = new Author(wordsMapped);
         // This strategy has waaaaay to many loops, this is n^3 time complexity, easier way to do this?, elimiated unnecesary loop. only n^2 now.
         while (!done.equals("n")){
@@ -69,9 +70,13 @@ public class App {
             for (String sentence : story){
                 System.out.println(sentence);
             }
+            done = ""; // Reset the "done" variable so it doesn't keep the previous letter.
             System.out.println();// Clear out the terminal space, too crowded.
+            while (!done.equals("y") && !done.equals("n")){
             System.out.print("Would you like another story (y or n)? ");
-            done = sc.next();
+            done = sc.next().toLowerCase().trim();
+            }
+            
         }
         System.out.println("Thank you for using StoryTeller!");
         sc.close();
