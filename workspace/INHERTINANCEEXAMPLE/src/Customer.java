@@ -24,6 +24,10 @@ public class Customer extends Person{
         setShippingAddress(shippingAddress);
         setPhoneNumber(phoneNumber);
     }
+    @Override 
+    public String getType(){
+        return "Customer";
+    }
     @Override
     public String toString(){
         return String.format("%s\t%s\t%s", super.toString(), shippingAddress, phoneNumber);

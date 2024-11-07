@@ -1,4 +1,4 @@
-public class Person {
+public abstract class Person{
     private String firstName;
     private String lastName;
     
@@ -19,11 +19,12 @@ public class Person {
     }
     public Person(String firstName, String lastName){
         setFirstName(firstName);
-        setFirstName(lastName);
+        setLastName(lastName);
     }
+    public abstract String getType(); // leaves it to descendants to spell out what their specific type is.
     @Override
     public String toString(){
-        return String.format("%s\t%s", firstName, lastName);
+        return String.format("%s\t%s\t%s", getType(), firstName, lastName);
     }
     
 }
