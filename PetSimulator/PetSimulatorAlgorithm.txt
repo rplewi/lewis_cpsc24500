@@ -1,0 +1,120 @@
+Create 5 or 6 classes, need them for the submission.
+
+pet class --> cat & dog & fish classes
+main {
+    printHeading();
+
+    Ask user for names of the three pets
+    create three pets using the names.
+    add them to an ArrayList<Pet> --> pets
+
+    create the "PetSimulator": PetSimulator ps = new PetSimulator(pets);
+
+    declare "activities" as ArrayList<ArrayList<String>>;
+        activities.get(0) --> ArrayList of strings each of which describes something a pet did during hour 0
+        activities.get(1) --> ArrayList of strings for the second hour of activity.
+        // All of these will print out our activities in the terminal.
+        // Could use a Printer class that will take in the ArrayList and will go through the strings and print out our activities.
+
+    do {
+        ask for number of hours to simulate --> hoursCount
+        if (hoursCount > 0){
+            tell PetSimulator to do its thing and store the activities in the ArrayList<ArrayList<String>>
+            activities = ps.simulate(hourCount); returns all the actions of all the pets over all the hours.
+            ActivityPrinter.print(activities);
+        }
+    } while(hoursCount > 0){
+        print a thank you
+    }
+}
+
+PetSimulator{
+    private ArrayList<Pet> pets;
+    
+    public ArrayList<ArrayList<String>> simulate(int hourCount){
+        ArrayList<ArrayList<String>> hourlyActivity = new ArrayList<ArrayList<String>>();
+
+        for each hour{
+            ArrayList<String> thisHoursActivities = new ArrayList<String>();
+            for each pet in pets list{
+                thisPetsActvitiesThisHour = pet.act();
+                thisHoursActivities.addAll(thisPetsActivitiesThisHour);
+            }
+            hourlyActivity.add(thisHoursActivities);
+        }
+
+        return hourlyActivity;
+    }
+}
+
+Public abstract Pet{
+
+    private String name;
+    private Random brain;
+    private int needFood, needSleep, needAttention; --> cutoff values
+
+    public abstract void intializeCutoffs(){ --> set needFood, needSleep, needAttention}
+
+    public abstract String getType(){ --> what kind of pet is this}
+
+    public ArrayList<String> act(){ --> This returns an ArrayList of this time period's activities. 
+        ArrayList<String> actions = new ArrayList<String>();
+        int decider = brain.nextInt(10); // Random "10" value, could change
+        if decider < needFood  
+            actions.add(Something that indicates this pet ate)
+        decider = brain.nextInt(10);
+        if decider < needSleep  
+            actions.add(Something that indicates they slept)
+        decider = brain.nextInt(10);
+        if decider < needAttention
+            actions.add(Something that indicates they sought attention)
+
+        return actions;
+    }
+
+}
+
+public class Dog extends Pet{
+    public int needFetch();
+
+    @Override
+    public String getType(){
+        return "dog";
+    }
+
+    @Override 
+    public void intializeCutoffs(){
+        needFood = 4;
+        needSleep = 7;
+        needAttention = 9;
+        needFetch = 6;
+    }
+    @Override
+    public ArrayList<String> act(){
+        ArrayList<String> result = super.act(); // Anything I might do as just a pet.
+        decider = brain.nextInt(10);
+        if decider < needFetch  
+            result.add(Something that indicates I played fetch)
+        return result.
+    }
+
+}
+public class Cat extends Pet{
+
+}
+
+public class Fish extends Pet{
+
+}
+
+ActivityPrinter{
+    public static void printActivities(ArrayList<ArrayList<String>> activities){
+        for i ranging from 0 up to activties.size(){
+            print "hour" + (i + 1);
+            ArrayList<String> thisHour = activites.get(i);
+            for each act in thisHour{
+                print out the action.
+            }
+        }
+    }
+}
