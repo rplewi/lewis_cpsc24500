@@ -1,0 +1,25 @@
+LinkedHashMap<String, ArrayList<String>>
+"n" --> ArrayList of nouns
+"v" --> ArrayList of verbs
+
+Setup a menu system
+JMenuBar - a frame has this structure to hold onto its main menu (setJMenuBar)
+JMenu - top-level menu parts
+JMenuItem - hang off the JMenu's (plural)
+
+To respond to events like clicking a menu item or JButton, implement the action listener iterface.
+Use an anonymous Innerclass inside of the declaration of addActionListener()
+
+public void actionPerformed(ActionEvent e){
+    specify the response to clicking on a button for example.
+}
+
+Declare a class that implements the ActionListener interface
+Create an object of that class.
+Register the button you want to mointor with that object.
+1.) At the frame level
+2.) At separate class level
+3.) Unnamed within the class you're in.
+
+
+MAKE SURE THAT YOUR TEXTAREA WRAPS TEXT!!!!!!!!!!please
